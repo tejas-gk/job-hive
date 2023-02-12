@@ -85,6 +85,7 @@ export default function Home() {
         '>
           
           <button
+            
             title='View as list'
             onClick={() => setViewAs('list')} className='text-gray-500 mr-2'><IoListOutline
               className={`text-gray-500 text-4xl
