@@ -27,3 +27,4 @@ this is a job hive project.A job hive is a place where you can find jobs and pos
 9. Add a job application page
 10. Add a job application form
 11. Add a job application confirmation page
+12. Make the application responsive
