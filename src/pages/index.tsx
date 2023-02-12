@@ -94,7 +94,7 @@ export default function Home() {
           <button
             title='View as grid'
             onClick={() => setViewAs('grid')} className='text-gray-500'><IoGridOutline
-              className={`text-gray-500 text-4xl
+              className={`text-gray-500 text-3xl
               ${viewAs === 'grid' ? 'text-blue-500' : ''}
             `}
             />
