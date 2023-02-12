@@ -16,7 +16,7 @@ const jobData = [
     time: 'now',
     type: 'full-time',
     skills: ['react', 'node', 'js'],
-    link: '/'
+    link: '/work/web-dev-03039i19943'
   },
   {
     title: 'python dev',
@@ -25,7 +25,7 @@ const jobData = [
     time: 'now',
     type: 'contract',
     skills: ['python', 'node', 'js'],
-    link: '/'
+    link: '/work/python-dev-03039i19943'
   },
   {
     title: 'web dev',
@@ -34,7 +34,7 @@ const jobData = [
     time: 'now',
     type: 'full-time',
     skills: ['react', 'node', 'js'],
-    link: '/'
+    link: '/work/web-dev-dedededed'
   },
   {
     title: 'laravel dev',
@@ -43,7 +43,7 @@ const jobData = [
     time: 'now',
     type: 'contract',
     skills: ['laravel', 'livewire', 'vuejs'],
-    link: '/'
+    link: '/work/laravel-dev-03039i19943'
   },
   {
     title: 'cpp dev',
@@ -52,7 +52,7 @@ const jobData = [
     time: 'now',
     type: 'full-time',
     skills: ['cpp', 'c', 'js'],
-    link: '/'
+    link: '/work/cpp-dev-03039i19943'
   },
   {
     title: 'vue js',
@@ -61,7 +61,7 @@ const jobData = [
     time: 'now',
     type: 'full-time',
     skills: ['vuejs', 'node', 'js'],
-    link: '/'
+    link: '/work/vuejs-dev-03039i19943'
   }
 
 ]
