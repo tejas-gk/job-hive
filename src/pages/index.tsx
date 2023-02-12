@@ -97,7 +97,8 @@ export default function Home() {
               className={`text-gray-500 text-4xl
               ${viewAs === 'grid' ? 'text-blue-500' : ''}
             `}
-            /></button>
+            />
+          </button>
         </div>
         <h1 className='text-2xl font-bold text-gray-800 mt-10 mb-5'>Recent Jobs</h1>
         {
