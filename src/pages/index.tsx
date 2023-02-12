@@ -4,9 +4,11 @@ import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 import Search from '@/components/Search'
 import Navbar from '@/components/Navbar'
-import Card from '@/components/Card'
+import GridViewCard from '@/components/GridViewCard'
 import Link from 'next/link'
-
+import ListViewCard from '@/components/ListViewCard'
+import { useState } from 'react'
+import { IoGridOutline, IoListOutline } from 'react-icons/io5'
 const inter = Inter({ subsets: ['latin'] })
 const jobData = [
   {
@@ -66,6 +68,7 @@ const jobData = [
 
 ]
 export default function Home() {
+  const [viewAs, setViewAs] = useState('list')
   return (
     <>
       <Head>
@@ -78,26 +81,73 @@ export default function Home() {
       '>
         <Navbar />
         <Search />
-        <div className="job-card-container grid lg:grid-cols-4  grid-cols-1
-        
-        ">
-          {jobData.map((job, i) => (
-            <div key={i}>
-              <Link
-                href={job.link}
-              >
-                <Card
-                  title={job.title}
-                  location={job.location}
-                  description={job.description}
-                  time={job.time}
-                  type={job.type}
-                  skills={job.skills}
-                />
-              </Link>
-            </div>
-          ))}
+        <div className='mt-10 flex justify-end
+        '>
+          
+          <button
+            title='View as list'
+            onClick={() => setViewAs('list')} className='text-gray-500 mr-2'><IoListOutline
+              className={`text-gray-500 text-4xl
+              ${viewAs === 'list' ? 'text-blue-500 ' : ''}
+              `}
+            /></button>
+          <button
+            title='View as grid'
+            onClick={() => setViewAs('grid')} className='text-gray-500'><IoGridOutline
+              className={`text-gray-500 text-4xl
+              ${viewAs === 'grid' ? 'text-blue-500' : ''}
+            `}
+            /></button>
         </div>
+        <h1 className='text-2xl font-bold text-gray-800 mt-10 mb-5'>Recent Jobs</h1>
+        {
+          viewAs === 'list' ? (
+
+            <div>
+              <div className="job-card-container
+        ">
+                {jobData.map((job, i) => (
+                  <div key={i}>
+                    <Link
+                      href={job.link}
+                    >
+                      <ListViewCard
+                        title={job.title}
+                        location={job.location}
+                        description={job.description}
+                        time={job.time}
+                        type={job.type}
+                        skills={job.skills}
+                      />
+                    </Link>
+                  </div>
+                ))}
+              </div>
+
+            </div>
+          ) : (
+
+            <div className="job-card-container grid lg:grid-cols-4  grid-cols-1
+        ">
+              {jobData.map((job, i) => (
+                <div key={i}>
+                  <Link
+                    href={job.link}
+                  >
+                    <GridViewCard
+                      title={job.title}
+                      location={job.location}
+                      description={job.description}
+                      time={job.time}
+                      type={job.type}
+                      skills={job.skills}
+                    />
+                  </Link>
+                </div>
+              ))}
+            </div>
+          )
+        }
 
       </main>
     </>

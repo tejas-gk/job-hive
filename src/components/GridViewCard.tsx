@@ -9,7 +9,7 @@ interface CardProps {
     skills?: string[]
 }
 
-export default function Card({
+export default function GridViewCard({
     title,
     location,
     description,
