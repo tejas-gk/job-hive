@@ -28,11 +28,12 @@ export default function Search() {
             <form>
                 <div className="flex justify-between items-center rounded-md gap-10 bg-white p-5 shadow-lg shadow-card-shadow-dark
               ">
-                    <div className="flex gap-2 items-center">
+                    <div className="flex md:gap-2 items-center">
                         <AiOutlineSearch className='text-[30px] font-bold cursor-pointer
                         '/>
                     </div>
-                    <input type="text" className='w-full bg-transparent border-none focus:outline-none
+                    <input type="text" className='md:w-full bg-transparent border-none focus:outline-none
+                    md:placeholder-gray-300 placeholder-gray-300 w-[200px]
                     ' placeholder='Search for jobs, companies, etc.' />
                     <AiOutlineCloseCircle className='text-[30px] font-bold cursor-pointer
                     '/>
