@@ -32,7 +32,7 @@ export default function GridViewCard({
                 </span>
                 <div className="flex justify-between items-center">
 
-                <h6 className="text-hardly-visible">India</h6>
+                <h6 className="text-hardly-visible">{location}</h6>
                 <h4
                     className='text-[#959595] text-[15px] font-bold  group-hover:text-white
                     '

@@ -85,7 +85,6 @@ export default function Home() {
         '>
           
           <button
-            
             title='View as list'
             onClick={() => setViewAs('list')} className='text-gray-500 mr-2'><IoListOutline
               className={`text-gray-500 text-4xl
@@ -129,7 +128,7 @@ export default function Home() {
             </div>
           ) : (
 
-            <div className="job-card-container grid lg:grid-cols-4  grid-cols-1
+            <div className="job-card-container grid lg:grid-cols-4  grid-cols-2 gap-4
         ">
               {jobData.map((job, i) => (
                 <div key={i}>
