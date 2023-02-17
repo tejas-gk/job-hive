@@ -8,6 +8,9 @@ interface CardProps {
     time: string
     type: string
     skills?: string[]
+    currentPage?: number
+    jobsPerPage?: number
+    totalJobs?: number  
 }
 
 export default function ListViewCard({
@@ -16,8 +19,14 @@ export default function ListViewCard({
     description,
     time,
     type,
-    skills
+    skills,
+    currentPage,
+    jobsPerPage,
+    totalJobs
 }: CardProps) {
+    // pagination
+    const pageNumbers = []
+        
     return (
         <div className='w-full bg-white mt-4 '>
             <div className='group group-by-item single-job w-inherit md:p-5 p-2 bg-white rounded-md hover:bg-primary-blue shadow-lg
