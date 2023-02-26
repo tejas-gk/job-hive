@@ -132,7 +132,9 @@ export default function Home() {
             </div>
           ) : (
 
-            <div className='mx-6 mb-8 mt-14 grid max-w-[1190px] grid-cols-1 gap-y-12 sm:mx-auto sm:mb-14 sm:mt-[70px] sm:grid-cols-2 sm:gap-x-3 sm:gap-y-16 sm:px-10 lg:mt-[105px] lg:grid-cols-3 lg:gap-x-[30px]'>
+              <div className='mx-6 mb-8 mt-14 grid max-w-[1190px] grid-cols-1 gap-y-12 sm:mx-auto sm:mb-14 sm:mt-[70px] sm:grid-cols-2 
+            sm:gap-x-3 sm:gap-y-16 sm:px-10 lg:mt-[105px] lg:grid-cols-3 lg:gap-x-[30px] 
+            '>
               {
                 jobs.map((job, i) => (
                   <div key={i}>
@@ -145,11 +147,6 @@ export default function Home() {
                       postedAt={job.postedAt}
                       contract={job.contract}
                       location={job.location}
-                      website={job.website}
-                      apply={job.apply}
-                      description={job.description}
-                      requirements={job.requirements}
-                      role={job.role}
                     />
                   </div>
                 ))

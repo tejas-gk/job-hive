@@ -25,7 +25,9 @@ export default function GridViewCard({
 
 }: Job) {
     return (
-        <div className='relative flex flex-col justify-between rounded-md bg-white  px-8 pb-8 pt-12'>
+        <div className='relative flex flex-col justify-between rounded-md bg-white  px-8 pb-8 pt-12 shadow-xl
+        
+        '>
             <div className={`absolute top-0 flex h-[50px] w-[50px] -translate-y-1/2 items-center justify-center rounded-[15px] 
             `}
                 style={{
@@ -59,7 +61,7 @@ export default function GridViewCard({
                     {company}
                 </p>
             </div>
-            <h4 className='mt-10'>
+            <h4 className='mt-10 text-[#b789e0]'>
                 {location}
             </h4>
         </div>
