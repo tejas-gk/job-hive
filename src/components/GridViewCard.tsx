@@ -1,4 +1,3 @@
-import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -11,19 +10,6 @@ interface Job {
     postedAt: string;
     contract: string;
     location: string;
-    website: string;
-    apply: string;
-    description: string;
-    requirements: {
-        content: string;
-
-        items: string[];
-    };
-    role: {
-        content: string;
-
-        items: string[];
-    };
 }
 
 
@@ -36,12 +22,7 @@ export default function GridViewCard({
     postedAt,
     contract,
     location,
-    website,
-    apply,
 
-    description,
-    requirements,
-    role,
 }: Job) {
     return (
         <div className='relative flex flex-col justify-between rounded-md bg-white  px-8 pb-8 pt-12'>

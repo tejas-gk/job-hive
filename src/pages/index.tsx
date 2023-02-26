@@ -10,7 +10,7 @@ import ListViewCard from '@/components/ListViewCard'
 import { useState } from 'react'
 import { IoGridOutline, IoListOutline } from 'react-icons/io5'
 import Card from '@/components/Card'
-import {jobs} from '@/data/jobs'
+import { jobs } from '@/data/jobs'
 const inter = Inter({ subsets: ['latin'] })
 const jobData = [
   {
@@ -84,10 +84,10 @@ export default function Home() {
       '>
         <Navbar />
         <Search />
-       
+
         <div className='mt-10 flex justify-end
         '>
-          
+
           <button
             title='View as list'
             onClick={() => setViewAs('list')} className=' mr-2'><IoListOutline
@@ -132,30 +132,30 @@ export default function Home() {
             </div>
           ) : (
 
-              <div className='mx-6 mb-8 mt-14 grid max-w-[1190px] grid-cols-1 gap-y-12 sm:mx-auto sm:mb-14 sm:mt-[70px] sm:grid-cols-2 sm:gap-x-3 sm:gap-y-16 sm:px-10 lg:mt-[105px] lg:grid-cols-3 lg:gap-x-[30px]'>
-                {
-                  jobs.map((job, i) => (
-                    <div key={i}>
-                      <GridViewCard
-                        id={job.id}
-                        company={job.company}
-                        logo={job.logo}
-                        logoBackground={job.logoBackground}
-                        position={job.position}
-                        postedAt={job.postedAt}
-                        contract={job.contract}
-                        location={job.location}
-                        website={job.website}
-                        apply={job.apply}
-                        description={job.description}
-                        requirements={job.requirements}
-                        role={job.role}
-                      />
-                    </div>
-                  ))
+            <div className='mx-6 mb-8 mt-14 grid max-w-[1190px] grid-cols-1 gap-y-12 sm:mx-auto sm:mb-14 sm:mt-[70px] sm:grid-cols-2 sm:gap-x-3 sm:gap-y-16 sm:px-10 lg:mt-[105px] lg:grid-cols-3 lg:gap-x-[30px]'>
+              {
+                jobs.map((job, i) => (
+                  <div key={i}>
+                    <GridViewCard
+                      id={job.id}
+                      company={job.company}
+                      logo={job.logo}
+                      logoBackground={job.logoBackground}
+                      position={job.position}
+                      postedAt={job.postedAt}
+                      contract={job.contract}
+                      location={job.location}
+                      website={job.website}
+                      apply={job.apply}
+                      description={job.description}
+                      requirements={job.requirements}
+                      role={job.role}
+                    />
+                  </div>
+                ))
 
-                }
-              </div>
+              }
+            </div>
           )
         }
 
