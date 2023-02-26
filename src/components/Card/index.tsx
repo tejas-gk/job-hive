@@ -27,7 +27,7 @@ interface Job {
 }
 
 
-export default function GridViewCard({
+export default function index({
     id,
     company,
     logo,
@@ -83,5 +83,5 @@ export default function GridViewCard({
             </h4>
         </div>
     )
-
+      
 }

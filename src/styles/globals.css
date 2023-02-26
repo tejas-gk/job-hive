@@ -11,7 +11,7 @@
 
 @layer base{
     body{
-        
+        background-color:#f4f6f8;
         font-family: 'Roboto', sans-serif;
     }
     h1{
