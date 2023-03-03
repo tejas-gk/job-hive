@@ -26,19 +26,21 @@ export default function Search() {
         <div className='search-container grid bg-card-shadow gap-10 rounded-md  p-10
       '>
             <form>
-                <div className="flex justify-between items-center rounded-md gap-10 bg-white p-5 shadow-lg shadow-card-shadow-dark
+                <div className="flex md:justify-between md:items-center rounded-md md:gap-10 bg-white p-5 shadow-lg shadow-card-shadow-dark
               ">
                     <div className="flex md:gap-2 items-center">
                         <AiOutlineSearch className='text-[30px] font-bold cursor-pointer
                         '/>
                     </div>
                     <input type="text" className='md:w-full bg-transparent border-none focus:outline-none
-                    md:placeholder-gray-300 placeholder-gray-300 w-[200px]
+                    md:placeholder-gray-300 placeholder-gray-300  debug w-[250px]
                     ' placeholder='Search for jobs, companies, etc.' />
+
                     <AiOutlineCloseCircle className='text-[30px] font-bold cursor-pointer
                     '/>
                 </div>
-                <button className='bg-[#0a66c2] text-white rounded-md p-3 mt-5 w-full hover:bg-[#0063e5]
+                <button className='bg-[#0a66c2] text-white rounded-md p-3 mt-3 md:mt-5 md:w-full hover:bg-[#0063e5]
+                w-[250px]
                 '>Search</button>
             </form>
 
