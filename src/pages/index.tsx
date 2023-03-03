@@ -70,7 +70,7 @@ const jobData = [
 
 ]
 export default function Home() {
-  const [viewAs, setViewAs] = useState('list')
+  const [viewAs, setViewAs] = useState('grid')
   console.log(jobs)
   return (
     <>
