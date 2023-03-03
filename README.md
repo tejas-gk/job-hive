@@ -2,6 +2,7 @@
 ### notice 
 this project is temporarily stopped because I found something 
 similar in Frontend mentor but here I'll get more flexibility so I will complete regardless 
+
 ## Description
 this is a job hive project.A job hive is a place where you can find jobs and post jobs.
 
