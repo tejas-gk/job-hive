@@ -85,7 +85,7 @@ export default function Home() {
         <Navbar />
         <Search />
 
-        <div className='mt-10 flex justify-end
+        <div className='mt-10 flex justify-end mr-10 md:mr-0
         '>
 
           <button
