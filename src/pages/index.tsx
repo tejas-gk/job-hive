@@ -11,8 +11,13 @@ import { useState } from 'react'
 import { IoGridOutline, IoListOutline } from 'react-icons/io5'
 import Card from '@/components/Card'
 import { jobs } from '@/data/jobs'
+import { useContext } from 'react'
+import { SearchContext } from '@/components/Search'
+
 export default function Home() {
   const [viewAs, setViewAs] = useState('grid')
+  const { search } = useContext(SearchContext)
+  console.log(search)
   console.log(jobs)
   return (
     <>

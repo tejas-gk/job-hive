@@ -25,6 +25,7 @@ export default function Search() {
     return (
         <div className='search-container grid bg-card-shadow gap-10 rounded-md  p-10 md:w-full  w-[350px] 
       '>
+            <SearchContext.Provider value={{ search: [], setSearch: () => { } }}>
             <form>
                 <div className="flex justify-between items-center rounded-md md:gap-10 bg-white md:p-5  shadow-lg shadow-card-shadow-dark
                 w-[300px] md:w-full
@@ -45,7 +46,7 @@ export default function Search() {
                 '>Search</button>
             </form>
 
-      
+            </SearchContext.Provider>
 
         </div>
     )
