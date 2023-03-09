@@ -11,64 +11,6 @@ import { useState } from 'react'
 import { IoGridOutline, IoListOutline } from 'react-icons/io5'
 import Card from '@/components/Card'
 import { jobs } from '@/data/jobs'
-const inter = Inter({ subsets: ['latin'] })
-const jobData = [
-  {
-    title: 'web dev',
-    location: 'India',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.',
-    time: 'now',
-    type: 'full-time',
-    skills: ['react', 'node', 'js'],
-    link: '/work/web-dev-03039i19943'
-  },
-  {
-    title: 'python dev',
-    location: 'combodia',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.',
-    time: 'now',
-    type: 'contract',
-    skills: ['python', 'node', 'js'],
-    link: '/work/python-dev-03039i19943'
-  },
-  {
-    title: 'web dev',
-    location: 'India',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.',
-    time: 'now',
-    type: 'full-time',
-    skills: ['react', 'node', 'js'],
-    link: '/work/web-dev-dedededed'
-  },
-  {
-    title: 'laravel dev',
-    location: 'france',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.',
-    time: 'now',
-    type: 'contract',
-    skills: ['laravel', 'livewire', 'vuejs'],
-    link: '/work/laravel-dev-03039i19943'
-  },
-  {
-    title: 'cpp dev',
-    location: 'India',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.',
-    time: 'now',
-    type: 'full-time',
-    skills: ['cpp', 'c', 'js'],
-    link: '/work/cpp-dev-03039i19943'
-  },
-  {
-    title: 'vue js',
-    location: 'India',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.',
-    time: 'now',
-    type: 'full-time',
-    skills: ['vuejs', 'node', 'js'],
-    link: '/work/vuejs-dev-03039i19943'
-  }
-
-]
 export default function Home() {
   const [viewAs, setViewAs] = useState('grid')
   console.log(jobs)
@@ -104,27 +46,25 @@ export default function Home() {
             />
           </button>
         </div>
-        <h1 className='text-2xl font-bold text-gray-800 mt-10 mb-5'>Recent Jobs</h1>
+       
         {
           viewAs === 'list' ? (
 
             <div>
               <div className="job-card-container
         ">
-                {jobData.map((job, i) => (
+                {jobs.map((job, i) => (
                   <div key={i}>
-                    <Link
-                      href={job.link}
-                    >
                       <ListViewCard
-                        title={job.title}
-                        location={job.location}
-                        description={job.description}
-                        time={job.time}
-                        type={job.type}
-                        skills={job.skills}
-                      />
-                    </Link>
+                        id={job.id}
+                        company={job.company}
+                        logo={job.logo}
+                        logoBackground={job.logoBackground}
+                        position={job.position}
+                        postedAt={job.postedAt}
+                        contract={job.contract}
+                      location={job.location}
+                    />
                   </div>
                 ))}
               </div>
@@ -160,3 +100,5 @@ export default function Home() {
     </>
   )
 }
+
+

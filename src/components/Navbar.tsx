@@ -1,19 +1,19 @@
 import { useState } from 'react'
 const navListItems = [
     {
-        title: 'Job',
+        title: 'Home',
         link: '/'
     },
     {
-        title: 'companies',
+        title: 'Connect',
         link: '/about'
     },
     {
-        title: 'Contact',
+        title: 'Pricing',
         link: '/contact'
     },
     {
-        title: 'Login',
+        title: 'Profile',
         link: '/login'
     }
 ]
