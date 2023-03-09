@@ -28,8 +28,8 @@ export default function JobDesc({
                 <div className='flex flex-col sm:flex-row sm:items-center sm:justify-between'>
                     <div className='mb-[50px] sm:mb-0'>
                         <div className='flex items-center space-x-3'>
-                            <p className='leading-[20px]'>{`Posted ${postedAt}`}</p>
-                            <div className='h-1 w-1 rounded-full bg-darkgray'></div>
+                            <p className='leading-[20px]'>Posted {postedAt}</p>
+                            <div className='h-1 w-1 rounded-full'></div>
                             <p className='leading-[20px]'>{type}</p>
                         </div>
 
@@ -42,17 +42,17 @@ export default function JobDesc({
                         <h4 className='mt-2'>{place}</h4>
                     </div>
                     <button
-                     
+
                     >
                         Apply Now
                     </button>
                 </div>
-                <p className='mt-8 md:mt-10'>{ description}</p>
+                <p className='mt-8 md:mt-10'>{description}</p>
                 <h3 className='mt-[66px] md:mt-10'>Requirements</h3>
-                <p className='mt-6 mb-8 md:mb-6'>{ requirements.content}</p>
-                { requirements.items && (
+                <p className='mt-6 mb-8 md:mb-6'>{requirements.content}</p>
+                {requirements.items && (
                     <ul className=' space-y-2 pl-4'>
-                        { requirements.items.map((item, i) => (
+                        {requirements.items.map((item, i) => (
                             <li className='pl-5' key={i}>
                                 {item}
                             </li>
@@ -60,10 +60,10 @@ export default function JobDesc({
                     </ul>
                 )}
                 <h3 className='mt-10'>What you will do</h3>
-                <p className='mt-6 '>{ role.content}</p>
-                { role.items && (
+                <p className='mt-6 '>{role.content}</p>
+                {role.items && (
                     <ul className='mt-8  space-y-2 pl-4 md:mt-6'>
-                        { role.items.map((item, i) => (
+                        {role.items.map((item, i) => (
                             <li className='pl-5' key={i}>
                                 {item}
                             </li>

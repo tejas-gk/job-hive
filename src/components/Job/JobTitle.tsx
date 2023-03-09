@@ -17,36 +17,32 @@ export default function JobTitle({
     url
 }: JobTitleProps) {
     return (
-        
-        <div className='debug relative  mt-14 max-w-[810px] px-6 md:px-10 flex gap-4 items-center md:justify-between flex-col md:flex-row bg-white shadow-lg rounded-lg p-4
+        <div className='relative mx-auto mt-14 px-6 md:px-10 md:w-[50rem] shadow-lg bg-white md:py-5 w-[25rem]
+         max-w-[1190px] md:mt-[70px] md:mb-14 md:rounded-md
         '>
             <div
-                className='flex px-4 py-6 rounded-md -mt-12 md:-mt-16 bg-gray-100 -ml-4 md:-ml-10 debug
-            '
-                style={{ backgroundColor: logoBackground }}
+                className='absolute left-0 right-0 mx-auto flex h-[50px] w-[50px] items-center justify-center transform -translate-y-1/2 top-0 
+                rounded-md md:mx-0 md:ml-10 md:h-36 md:w-36 md:translate-y-3  py-4 px-4'
+                style={{ backgroundColor: `${ logoBackground}` }}
             >
                 <Image
                     src={logo}
                     alt={company}
-                    width={50}
-                    height={50}
-                    className='rounded-[15px] max-h-[40px] max-w-[40px]'
-                />
+                    width={100}
+                    height={100}
+                    className='rounded-lg md:rounded-md'
+                />  
             </div>
-            <div className='flex flex-col md:flex-row gap-4 items-center justify-between w-full debug
-            '>
-                <div className='flex flex-col'>
-                <h3 className='text-base font-medium leading-6 text-gray-900'>
-                    {company}
-                </h3>
-                <Link href={url}>
-                    <p className='mt-1 text-sm leading-5 text-gray-500'>
+            <div className='flex flex-col items-center rounded-md bg-white pb-8 md:ml-36 md:h-36 md:flex-row md:justify-between  md:pl-10 md:pr-12 md:pb-0'>
+                <div className='flex flex-col items-center md:items-start'>
+                    <h3 className='mt-12 md:hidden'>{ company}</h3>
+                    <h2 className='hidden md:inline-block'>{ company}</h2>
+                    <p className='mt-2 mb-6 leading-5 md:mb-0'>
                         {url}
                     </p>
-                    </Link>
                 </div>
-                <button className='flex items-center justify-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition duration-150 ease-in-out'>
-                    Apply now
+                <button>
+                    Company Site
                 </button>
             </div>
         </div>
